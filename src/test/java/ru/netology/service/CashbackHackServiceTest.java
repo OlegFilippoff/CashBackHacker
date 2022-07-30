@@ -1,8 +1,8 @@
 package ru.netology.service;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CashbackHackServiceTest {
 
@@ -24,14 +24,12 @@ public class CashbackHackServiceTest {
         int actual = service.remain(1);
         assertEquals(999, actual);
     }
-
     @Test
     public void testRemainAmount999() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(999);
         assertEquals(1, actual);
     }
-
     @Test
     public void testRemainAmount1000() {
         CashbackHackService service = new CashbackHackService();
@@ -40,21 +38,18 @@ public class CashbackHackServiceTest {
 
         //в коде нет проверки, что до текущей границы начисления бонусов больше ничего не нужно докупать
     }
-
     @Test
     public void testRemainAmount1001() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(1001);
         assertEquals(999, actual);
     }
-
     @Test
     public void testRemainAmount1500() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(1500);
         assertEquals(500, actual);
     }
-
     @Test
     public void testRemainAmount2000Negative() {
         CashbackHackService service = new CashbackHackService();
@@ -63,7 +58,6 @@ public class CashbackHackServiceTest {
 
         //нет проверки на ввод отрицательных значений
     }
-
     @Test
     public void testRemainAmount95() {
         CashbackHackService service = new CashbackHackService();
@@ -71,15 +65,13 @@ public class CashbackHackServiceTest {
         assertEquals(905, actual);
 
     }
-
-    @Test
+    @org.junit.jupiter.api.Test
     public void testRemainAmount91() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(91);
         assertEquals(909, actual);
 
     }
-
     @Test
     public void testRemainAmount5300() {
         CashbackHackService service = new CashbackHackService();
